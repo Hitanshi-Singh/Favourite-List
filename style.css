@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.draggable-list {
+  border: 1px solid black;
+  padding: 0;
+  list-style-type: none;
+}
+.draggable-list li {
+  background-color: rgb(218, 218, 218);
+  display: flex;
+  flex: 1;
+}
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+.draggable-list .number {
+  background-color: rgb(163, 163, 163);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  height: 60px;
+  width: 60px;
+}
+
+.draggable-list li.over .draggable{
+  background-color: #eaeaea;
+}
+
+.draggable-list .food-name{
+    margin: 0 20px 0 0;
+}
+.draggable-list li.wrong .food-name{
+  color: rgb(211, 33, 33);
+}
+.draggable-list li.right .food-name{
+    color: rgb(31, 197, 31);
+}
+
+.draggable{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex:1;
+}
+
+.check-btn{
+  background-color: rgb(191, 191, 191);
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+.check-btn:active{
+  transform: scale(0.98);
+}
+.check-btn:focus{
+  outline: none;
+}
